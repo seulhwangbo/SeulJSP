@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+td, th {
+	padding: 10px;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Modern Browser</h2>
+	<p>국내에서 자주 사용하는 모던 브라우저</p>
+	<table>
+		<colgroup>
+			<col style="width: 200px;">
+			<col style="width: 100px;">
+			<col style="width: 300px;">
+		</colgroup>
+		<tr>
+			<td>브라우저</td>
+			<td>제조업체</td>
+			<td>다운로드</td>
+		</tr>
+		<tr>
+			<td>크롬(Chrome)</td>
+			<td>Google</td>
+			<td>https://www.google.com/chrome/</td>
+		</tr>
+		<tr>
+			<td>파이어폭스(Firfox)</td>
+			<td>Mozilla</td>
+			<td>https://www.mozilla.org/ko/firefox/</td>
+		</tr>
+		<tr>
+			<td>엣지(Edge)</td>
+			<td>Microsoft</td>
+			<td>https://www.microsoft.com/ko-kr/windows/microsoft-edge</td>
+		</tr>
+	</table>
+</body>
+</html>
