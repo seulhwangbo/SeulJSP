@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chgColor() {
+		var selFirstItem = document.getElementsByName("first");
+		for (var i = 0; i <selFirstItem.length; i++){
+			selFirstItem.item(i).style.color = "red";
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>dom03</h1>
+	<h4>name 속성을 이용한 선택</h4>
+	<p name="first">첫번째 단락이에요</p>
+	<ul>
+		<li name="first">첫번째 아이템이에요</li>
+		<li>두번째 아이템이에요</li>
+		<li name="first">세번째 아이템이에요</li>
+		<li>네번째 아이템이에요</li>
+		<li>다섯번째 아이템이에요</li>
+	</ul>
+	<button onclick="chgColor()">first 색상 red 변경</button>
+</body>
+</html>
