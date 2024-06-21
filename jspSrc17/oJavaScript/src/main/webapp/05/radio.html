@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk(){
+		var mstr = "내가 제일 좋아하는 영화는?\n";
+		var sstr = "내가 제일 좋아하는 노래는?\n";
+	
+		for(var i=0; i<frm.movie.length;i++){
+			if(frm.movie[i].checked){
+				mstr += frm.movie[i].value +"\n";
+				break;
+			}
+		}
+		for(var j=0; j<frm.sing.length;j++){
+			if(frm.sing[j].checked){
+				sstr += frm.sing[j].value +"\n";
+				break;
+			}
+		}
+		
+		alert(mstr+sstr);
+	}
+
+</script>
+</head>
+<body>
+	<form action="" name="frm">
+	<h2>다음에서 선택</h2>
+	1. 가장 좋아하는 영화 한 개만을 선택.<br>
+	<input type="radio" name="movie" value="범죄도시" id="m1">
+	범죄도시
+	<input type="radio" name="movie" value="그녀가죽었다" id="m2">
+	<label for="m2">그녀가 죽었다</label>
+	<input type="radio" name="movie" value="쿵후 팬더" id="m3">
+	<label for="m3">쿵푸 팬더</label>
+	<hr>
+	2.좋아하는 노래를 선택 <br>
+	
+	<input type="radio" name="sing" value="supanova" id="s1">
+	supanova
+	<input type="radio" name="sing" value="howsweet" id="s2">
+	<label for="s2">how sweet</label>
+	<input type="radio" name="sing" value="magnetic" id="s3">
+	<label for="s3">magnetic</label>
+	<input type="radio" name="sing" value="해야" id="s4">
+	<label for="s4">해야</label>
+	<hr>
+	<input type="button" value="확인" onclick="chk()">
+	</form>
+</body>
+</html>

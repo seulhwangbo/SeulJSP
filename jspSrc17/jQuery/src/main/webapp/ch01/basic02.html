@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- jQuery download 방식이다 -->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	/* $(document).ready(function(){
+		$('h1').css('color','red');
+		$('p').css ('color','green');
+		이 방법도 사용하지만 밑에 있는 것이 간이버전이다
+	}) 
+	밑에 방식으로 사용하면 알아서 document.ready 를 생략해도 실행한다. 위와 아래가 같은 의미라는 점 확인하기
+	
+	밑에 있는 *는 전위연상자라서 하나만 사용해도 모든 body에 적용된다
+	*/
+	$(function(){
+		$('*').css('color','red');
+		jQuery("p").css('color','green');
+	});
+</script>
+</head>
+<body>
+	<h1>비가 오려나</h1>
+	<p> 태풍아 </p>
+</body>
+</html>

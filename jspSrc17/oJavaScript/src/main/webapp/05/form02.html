@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+		function chk(){
+		if (frm.id.value.length == 0){
+			alert ("이름이 없어요");
+			frm.id.focus();
+			return;
+		}
+		if(frm.age.value.length == 0){
+			alert ("나이를 입력해 주세요");
+			frm.age.focus();
+			return;
+		} else if (frm.age.value == (isNaN())){
+			alert ("나이가 문자예요");
+			frm.age.focus();
+			return;
+		} else document.write("입력 성공");
+		
+		var getAddr = document.getElementById("addr");
+		}
+</script>
+</head>
+<body>
+<h2>입력창 </h2>
+	<form action="" name="frm">
+		이름: <input type="text" 		name="id"><p>
+		나이: <input type="text" 		name="age"><p>
+		주소: <input type="text" 		name="addr" id="addr"><p>
+		<input type="button" value="확인" onclick="chk()">
+	</form>
+</body>
+</html>
