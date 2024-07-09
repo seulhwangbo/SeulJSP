@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk(){
+	 if(!frm.num.value){
+	    alert("숫자 입력 않하니?");
+	 	frm.num.focus();
+	 	return false;
+	} 
+	 if(isNaN(frm.num.value)){
+		alert("숫자 뭔지 모르니?");
+		frm.num.focus();
+		frm.num.value = "";
+		return false;
+	 }
+	 return true;
+	}
+</script>
+</head>
+<body>
+	<h1>숫자를 입력하세요</h1>
+	<form action="Add3" name="frm"
+		 method="post"
+		 onsubmit="return chk()">
+		 숫자 : <input type="text" name="num">
+		 <p>
+		 문자 : <input type="text" name="han">
+		
+		 	<input type="submit" value="확인">
+	</form>
+</body>
+</html>
