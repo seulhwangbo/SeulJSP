@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function chk() {
+	if(!frm.name.value) {
+		alert("이름을 입력하셔야죠");
+		 frm.name.focus();
+		 return false;
+	}
+	var movieTrue = false;
+	for (var i = 0; frm.song.length; i++) {
+		if(frm.song[i].checked==true) {
+			movieTrue = true;
+			break;
+		}
+	
+	if (!movieTrue)
+		alert("좋아하는 음악이 하나도 없어?");
+		return false;
+	}
+	return true;
+	
+}
+</script>
+</head>
+<body>
+	<h2> 좋아하는 노래를 고르세요 </h2>
+	<form action="song1.jsp" name="frm" onsubmit="return chk()">
+	  이름 : <input type="text" name="name"><p>
+	  음악 : <p>
+	  	<input type="checkbox" name="song" value="슈퍼노바"> 슈퍼노바<p>
+	  	<input type="checkbox" name="song" value="스몰걸">   스몰걸<p>
+ 	  	<input type="checkbox" name="song" value="하우스윗">  하우스윗<p>
+	  	<input type="checkbox" name="song" value="고민중독"> 고민중독<p>
+	  	<input type="checkbox" name="song" value="해야">   해야<p>
+		<input type="submit" value="확인">	
+	</form>
+</body>
+</html>
