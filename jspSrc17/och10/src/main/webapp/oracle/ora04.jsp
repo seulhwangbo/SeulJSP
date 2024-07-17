@@ -1,6 +1,6 @@
+<%@page import="java.sql.ResultSet"%>
 <%@page import="och10.Dept"%>
 <%@page import="java.sql.Statement"%>
-<%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -24,8 +24,7 @@
 	Class.forName(driver);
 	Connection conn = DriverManager.getConnection(url,"scott","tiger");
 	Statement  stmt = conn.createStatement();
-	ResultSet  rs   = stmt.executeQuery(sql);	
-
+	ResultSet rs = stmt.executeQuery(sql);
 	//DTO 인스턴스는 소문자로 많이 사용한다
 	// 1. DTO 선언
 	Dept dept = new Dept();
@@ -44,7 +43,6 @@
 		request.setAttribute("dept", dept);
 	}
 	else out.println("그게 무슨 부서야 없는데");
-	rs.close();
 	stmt.close();
 	conn.close();
 

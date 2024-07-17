@@ -14,8 +14,7 @@
 </style>
 </head>
 <body>
-<h2> MVC Model1 Vi
-ew</h2>
+<h2> MVC Model1 View</h2>
 <% 
 	ArrayList<Emp> al = (ArrayList<Emp>)request.getAttribute("al");
 %>
@@ -31,9 +30,9 @@ ew</h2>
 	<%
 	for(int i =0; i<al.size();i++){
 		out.println("<tr><td>" + al.get(i).getEmpno()+"</td>");
-		out.println("<td>" + al.get(i).getEname()+"</td>");
-		out.println("<td>" + al.get(i).getJob()+"</td>");
-		out.println("<td>" + al.get(i).getSal()+"</td></tr>");
+		out.println("<td>" 	   + al.get(i).getEname()+"</td>");
+		out.println("<td>"     + al.get(i).getJob()+"</td>");
+		out.println("<td>"     + al.get(i).getSal()+"</td></tr>");
 	}
 	%>
 </table>
