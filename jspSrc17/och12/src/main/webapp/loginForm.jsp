@@ -24,5 +24,7 @@
 			<td><input type="reset"  value="취소"></td></tr>
 		</table>
 	</form><p>
+			<a href="joinForm.jsp">회원가입 </a>
+	
 </body>
 </html>

@@ -17,7 +17,7 @@
 	if (result ==1){
 		session.setAttribute("id", id);
 		System.out.println("login success");
-//		response.sendRedirect("main.jsp");
+		response.sendRedirect("main.jsp");
 	}else if(result == 0){
 %>
 <script type="text/javascript">
