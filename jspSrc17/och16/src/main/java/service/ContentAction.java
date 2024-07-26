@@ -17,8 +17,8 @@ public class ContentAction implements CommandProcess {
 	// DAO Logic
 	// 2. BoardDao bd Instance
     // 3. Board board = bd.select(num);
-
 	// 4. request 객체에 num , pageNum , board
+		
 	System.out.println("ContentAction Service Start....");
 	int num = Integer.parseInt(request.getParameter("num"));
 	String pageNum =request.getParameter("pageNum");
