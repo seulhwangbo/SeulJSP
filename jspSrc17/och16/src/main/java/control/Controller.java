@@ -12,6 +12,7 @@ import service.CommandProcess;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -119,7 +120,18 @@ public class Controller extends HttpServlet {
 		} catch (Exception e) {
 			throw new ServletException(e);
 		}
+		
+		//ajax string을 포함하고 있으면
+		if (command.contains("ajaxGet")) {
+			System.out.println("ajaxGet String => " + command);
+			String writer = (String) request.getAttribute("writer");
+			PrintWriter pw= response.getWriter();
+			pw.write(writer);
+			pw.flush();
+		} else {
+		// 일반적인 경우 == ajax가 아닌 경우들을 포괄하는 매커니즘
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
+		}
 	}
 }

@@ -191,7 +191,7 @@ public class BoardDao {
 		      String sql1 = "SELECT nvl(MAX(num),0) FROM board";
 		      // 신규 + 댓글 공통 실행
 		      String sql3 = "INSERT INTO board VALUES(?,?,?,?,?,?,?,?,?,?,?,sysdate)";
-		      //홍해의 기적 : 댓글일 때만 
+		      //홍해의 기적 : 
 		      String sql2 ="update board set re_step = re_step+1 where ref=? and re_step>?";
 		 
 		      
@@ -252,4 +252,35 @@ public class BoardDao {
 		      }
 		      return result;
 		   } 
+	   
+	   public int delete(Board board) throws SQLException
+	   		{
+		   int result = 0;
+
+		   Connection conn = null;
+		   PreparedStatement pstmt = null;
+		   String sql = "Delete From Board Where num=? AND passwd=?";
+		   
+		   try {
+			   
+			   conn = getConnection();
+			   pstmt= conn.prepareStatement(sql);
+			   pstmt.setInt(1, board.getNum());
+			   pstmt.setString(2, board.getPasswd());
+			   
+			   result = pstmt.executeUpdate();
+			   
+			   if(result>0) result = 1;
+			   else			result = 0;
+
+		} catch (Exception e) {
+			System.out.println("BoardDao delete e.getMessage => " + e.getMessage());
+		} finally {
+			if(pstmt != null) pstmt.close();
+			if(conn  != null) conn.close();
+		}
+		   
+		   return result;
+	   }
+
 }

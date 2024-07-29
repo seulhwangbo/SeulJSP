@@ -14,6 +14,27 @@
 		width: 100%;
 	}
 </style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	function getDeptName(p_num) {
+		alert("getDeptName p_num -> " +p_num);	
+		
+		$.ajax({
+			url : "ajaxGetDeptName.do",
+			data: {num : p_num},
+			dataType: 'text',
+			success : function(writer) {
+				alert(".ajax Data" +writer);
+				/* input tag */
+				$('#writerName').val(writer);
+				/* span tag */
+				$('#msg').html(writer);
+				alert("getDeptName 2 ");
+			}
+		});
+		alert("getDeptName 3");
+	}
+</script>
 </head>
 <body>
    <h1>게시판</h1>
@@ -73,21 +94,9 @@
 			<a href='list.do?pageNum=${startPage+blockSize}'>[다음]</a>
 		</c:if>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	AJax writerName 결과 :  <input type="text" id="writerName"  readonly="readonly"><p>
+   	Message           :  <span id="msg"></span><p>
 
 </body>
 </html>
